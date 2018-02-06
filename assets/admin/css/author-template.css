@@ -1,0 +1,345 @@
+.htmlpress-processing-success {
+    color: green;
+}
+.htmlpress-processing {
+    animation: htmlpress-processing 0.8s infinite;
+    -webkit-animation: htmlpress-processing 0.8s infinite;
+}
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes htmlpress-processing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+@keyframes htmlpress-processing {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+#htmlpress {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.htmlpress-header ul {
+    margin: 0;
+    padding: 0;
+}
+
+.htmlpress-header a,
+.htmlpress-header a:visited,
+.htmlpress-header a:focus {
+    color: #333;
+    text-decoration: none;
+    outline: none;
+}
+
+.htmlpress-header li {
+    display: inline-block;
+    padding: 0.5em 0.5em;
+    cursor: pointer;
+}
+
+    .htmlpress-post:nth-child(4) {
+    clear: both;
+}
+
+.htmlpress-header .toolbar {
+    float: right;
+}
+
+.htmlpress-header .logo {
+    float: left;
+}
+
+.htmlpress-header {
+    border-bottom: 1px solid #f1f1f1;
+    display: inline-block;
+    width: 100%;
+    padding: 0.5em 1em;
+}
+
+.htmlpress-header h1 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+body.author-template {
+	background: #fff;
+    /*margin-top: -32px;*/
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*.preview iframe {*/
+.preview #htmlpress-preview-frame {
+    width: 100%;
+    min-height: 200px;
+}
+.inline-view-480,
+.inline-view-768 {
+    box-shadow: 0 0 0px 1px #ececec;
+}
+.inline-view-480 {
+    width: 480px;
+}
+.inline-view-768 {
+    width: 768px;
+}
+
+/** TEMP */
+@media all and (min-width: 768px) {
+    .col-md-3 {
+        width: 33.33%;
+        float: left;
+        display: block;
+    }
+}
+.template-html-contents,
+.template-js-contents,
+.template-css-contents {
+    display: none;
+}
+
+.editor-template-html.open {
+    left: 0;
+}
+.editor-template-js.open {
+    right: 0;
+}
+.editor-template-html.open,
+.editor-template-css.open,
+.editor-template-js.open {
+    z-index: 11;
+    background: white;
+}
+
+.preview .frame {
+    margin: 0 auto;
+    min-height: 100px;
+    transition: all ease 0.4s;
+}
+
+#template-html,
+#template-css,
+#template-js {
+    min-height: 300px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.ace_status-indicator {
+    color: gray;
+    position: absolute;
+    right: 0;
+    border-left: 1px solid;
+}
+
+
+/**
+ * Full screen mode ( default )
+ * and Full screen mode for preview
+ */
+.htmlpress-template-default #main {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 32px;
+    bottom: 0;
+    background: white;
+}
+.view-full-screen .frame {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 64px;
+    bottom: 0;
+    background: white;
+    height: 100vh;
+    z-index: 99999;
+}
+.view-full-screen.admin-bar .frame {
+    top: 96px;
+}
+.view-full-screen .frame:before {
+    content: "";
+    background: #fff;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.view-full-screen .htmlpress-header {
+    background: #fff;
+    position: fixed;
+    right: 0;
+    z-index: 999999;
+}
+.view-full-screen .dashicons-visibility:before {
+    content: "\f530";
+}
+/*.view-full-screen iframe {*/
+.view-full-screen #htmlpress-preview-frame {
+    border: none;
+    position: relative;
+    height: 100vh;
+    height: calc( 100vh - 95px );
+    overflow: scroll;
+}
+
+/**
+ * Single
+ */
+.single-htmlpress #content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    background: #fff;
+    max-width: 100%;
+}
+.single-htmlpress.admin-bar #content {
+    top: 32px;
+}
+.single-htmlpress frame {
+    border: none !important;
+}
+.single-htmlpress .editors .dashicons {
+    position: absolute;
+    margin-right: -3px;
+    cursor: pointer;
+    height: 2em;
+    line-height: 2em;
+    width: 2em;
+    font-size: 16px;
+    right: 10px;
+    top: 0;
+}
+
+.single-htmlpress label {
+    margin: 0;
+    width: 100%;
+}
+.single-htmlpress h2 {
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-right: 1px solid #f1f1f1;
+    position: relative;
+    font-weight: bold;
+    margin: 0 !important;
+    line-height: normal;
+}
+.shortcode-info > div {
+    display: inline-block;
+}
+.single-htmlpress .shortcode-info {
+    font-size: 0.8rem;
+    margin-left: 1em;
+    display: inline-block;
+}
+.single-htmlpress .shortcode-info input {
+    margin-left: 1em;
+    min-width: 200px;
+    background: #f1f1f1;
+    color: #666;
+    border: 1px solid #eaeaea;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    line-height: normal;
+    padding: 0.5em 1em;
+}
+
+
+
+
+/**
+ * Quick View
+ */
+/**
+ * Quick View
+ */
+div#TB_window {
+    position: fixed !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    height: 100% !important;
+    text-align: center;
+}
+
+#TB_window #TB_title {
+    text-align: left;
+    height: 50px;
+}
+
+#TB_window #TB_ajaxWindowTitle {
+    line-height: 50px;
+}
+
+#TB_window #TB_closeWindowButton {
+    height: 50px;
+    width: 50px;
+}
+
+#TB_window .tb-close-icon {
+    height: 50px;
+    line-height: 3.5;
+    text-align: center;
+    width: 50px;
+}
+
+
+/** TEMP */
+.editors .col-md-4 {
+    float: left;
+    width: 33.33%;
+    border-top: 1px solid #f1f1f1;
+}
+
+.template-editor-contents {
+    padding: 10px;
+}
+
+.htmlpress-template-default .select2-container {
+    width: 360px !important;
+}
+
+.htmlpress-template-default .select2-container--default.select2-container--focus .select2-selection--multiple {
+    border-radius: 0;
+    border-color: #d0d0d0;
+}
+
+.toolbar-contents .more-content {
+    padding: 15px;
+}
+.toolbar-contents {
+    position: absolute;
+    right: 0;
+    background: #fff;
+    width: 600px;
+}
+#saveHTMLCanvas canvas {
+    max-width: 100%;
+}
+.toolbar-contents p {
+    font-size: 16px;
+}
+
+#saveHTMLBtn {
+    font-size: 14px;
+    border-radius: 0;
+    margin-bottom: 15px;
+}
+
+#saveHTMLBtn .msg {
+    margin-left: 10px;
+}
